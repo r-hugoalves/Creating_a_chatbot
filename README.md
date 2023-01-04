@@ -24,3 +24,10 @@ Isso é um erro que de fato pode acontecer durante a instação do chatterbot po
 `python -m spacy download en_core_web_sm` <br>
 
 Feito isso, execute novamente o comando e a instação ocorrerá com sucesso!
+
+3) Demais bibliotecas usadas (todas podem ser instaladas usando o pip install "nome-da-biblioteca")
+
+Flask <br>
+SQLAchemy <br>
+Pitz <br>
+Pytest <br>
