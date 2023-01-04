@@ -1,29 +1,15 @@
-#importações necessárias
-# Para treinar o nosso chatbot, vamos utilzar o "ListTrainer"
+from flask import Flask
 
-from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+#inicialização básica do Flask
 
-chatbot = ChatBot('Suporte Hugo')
+app = Flask(__name__)
 
-#O nosso chatbot vai aprender por meio de uma lista, com a seguinte estrutura:
-# lista = [
-#    "mensagem do usuário",
-#    "chatbot responde",
-#    "mensagem do usuário",
-#    "chatbot responde",
-#     ...
-#]
+@app.route("/hello") #definindo a rota (endereço)
+def hello():
+  return "Hi there"
 
-conversa = ["Oi", "Oi, tudo bem? Como posso te ajudar?", "Bom dia", "Bom dia, tudo bem? Como posso te ajudar?",
-            "Boa noite", "Boa noite, tudo bem? Como posso te ajudar?"]
+if __name__ == "__main__":
+  app.run()
 
-trainner = ListTrainer(chatbot)
-trainner.train(conversa)
-
-while True:
-  mensagem = input('Mande uma mensagem.: ')
-  if mensagem == "parar":
-    break
-  resposta = chatbot.get_response(mensagem)
-  print(resposta)
+# ao executar o programa, ele retornará o endereço web, que no nesse caso será:
+# http://127.0.0.1:5000
