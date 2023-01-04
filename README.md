@@ -16,11 +16,11 @@ Porém, ele estava retornando com o seguinte erro:
 
 Isso é um erro que de fato pode acontecer durante a instação do chatterbot por meio de um ambiente virtual, mas que pode ser solucionado de maneira simples e eficiente com o seguinte trecho de código:
 
->git clone https://github.com/feignbird/ChatterBot-spacy_fixed.git
-> pip install ./ChatterBot-spacy_fixed
-> pip install chatterbot-corpus
-> pip uninstall pyYAML
-> pip install pyYAML==5.3.1
-> python -m spacy download en_core_web_sm
+`git clone https://github.com/feignbird/ChatterBot-spacy_fixed.git` <br>
+`pip install ./ChatterBot-spacy_fixed` <br>
+`pip install chatterbot-corpus` <br>
+`pip uninstall pyYAML`<br>
+`pip install pyYAML==5.3.1` <br>
+`python -m spacy download en_core_web_sm` <br>
 
 Feito isso, execute novamente o comando e a instação ocorrerá com sucesso!
